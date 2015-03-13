@@ -1,0 +1,14 @@
+{
+  "name": "shopping-list",
+  "version": "0.1.0",
+  "description": "Shopping list utility",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.8.11"
+  }
+}
