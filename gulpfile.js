@@ -2,6 +2,7 @@ var path        = require('path');
 var gulp        = require('gulp');
 var runSequence = require('run-sequence');
 var concat      = require('gulp-concat');
+var ghPages     = require('gulp-gh-pages');
 var del         = require('del');
 
 var buildFolder = './dist/';
@@ -49,6 +50,11 @@ gulp.task('build', function(done) {
     ['concat:js', 'concat:css', 'copy:fonts', 'copy:index'],
     done
   );
+});
+
+gulp.task('publish', ['build'], function() {
+  return gulp.src(path.join(buildFolder, '**/*'))
+    .pipe(ghPages());
 });
 
 gulp.task('default', function(done) {
