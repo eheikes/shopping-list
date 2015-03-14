@@ -1,4 +1,6 @@
 angular.module('shoppingList').controller('ShoppingListController', function($scope, $window) {
+  'use strict';
+
   var blankItem = {
     name: '',
     category: '',
@@ -43,7 +45,7 @@ angular.module('shoppingList').controller('ShoppingListController', function($sc
     if ($window.confirm('Delete this item?')) {
       $scope.listItems.splice(index, 1);
     }
-  }
+  };
 
   $scope.setEditMode = function(bool) {
     $scope.isEditing = !!bool;

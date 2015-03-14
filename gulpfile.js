@@ -1,8 +1,12 @@
+/* jshint node:true */
+'use strict';
+
 var path        = require('path');
 var gulp        = require('gulp');
 var runSequence = require('run-sequence');
 var concat      = require('gulp-concat');
 var ghPages     = require('gulp-gh-pages');
+var jshint      = require('gulp-jshint');
 var minifyCss   = require('gulp-minify-css');
 var uglify      = require('gulp-uglify');
 var del         = require('del');
@@ -11,6 +15,15 @@ var buildFolder = './dist/';
 
 gulp.task('clean', function(done) {
   del(buildFolder, done);
+});
+
+gulp.task('lint', function() {
+  return gulp.src([
+    'gulpfile.js',
+    'app/*.js'
+  ])
+    .pipe(jshint())
+    .pipe(jshint.reporter('default'));
 });
 
 gulp.task('concat:js', function() {
@@ -58,7 +71,7 @@ gulp.task('minify:js', function() {
 gulp.task('minify:css', function() {
   return gulp.src(path.join(buildFolder, 'css', 'app.css'))
     .pipe(minifyCss())
-    .pipe(gulp.dest(path.join(buildFolder, 'css')))
+    .pipe(gulp.dest(path.join(buildFolder, 'css')));
 });
 
 gulp.task('build', function(done) {
@@ -79,5 +92,5 @@ gulp.task('publish', ['optimize'], function() {
 });
 
 gulp.task('default', function(done) {
-  runSequence('build', done);
+  runSequence(['lint', 'build'], done);
 });
