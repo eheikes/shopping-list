@@ -91,6 +91,14 @@ gulp.task('publish', ['optimize'], function() {
     .pipe(ghPages());
 });
 
+gulp.task('watch', function() {
+  gulp.watch([
+    'gulpfile.js',
+    'app/*.js'
+  ], ['lint']);
+  gulp.watch('app/**/*', ['build']);
+});
+
 gulp.task('default', function(done) {
-  runSequence(['lint', 'build'], done);
+  runSequence(['lint', 'build'], 'watch', done);
 });

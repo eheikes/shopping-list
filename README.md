@@ -19,6 +19,8 @@ To build the project into the `dist` folder, run the default gulp task:
 gulp
 ```
 
+The default task will watch for changes to the files and rebuild as necessary.
+
 To build and publish the project to the `gh-pages` branch:
 
 ```shell
