@@ -2,6 +2,8 @@
 
 Create a shopping list, automatically sorted by category in a printable format.
 
+**[Use it here](http://eheikes.github.io/shopping-list/).**
+
 ## Build
 
 To build the project, you'll need [NodeJS/npm](https://nodejs.org/), [Bower](http://bower.io/), and [gulp](http://gulpjs.com/) installed.
