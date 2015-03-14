@@ -62,7 +62,6 @@ gulp.task('copy:index', function() {
 gulp.task('minify:js', function() {
   return gulp.src(path.join(buildFolder, 'js', 'app.js'))
     .pipe(uglify({
-      mangle: false,
       preserveComments: 'some'
     }))
     .pipe(gulp.dest(path.join(buildFolder, 'js')));

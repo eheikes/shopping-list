@@ -3,9 +3,10 @@
  * http://github.com/eheikes/shopping-list
  * License: Apache-2.0
  */
-angular.module('shoppingList', ['ngSanitize', 'ui.select', 'ng.group'])
-  .config(function(uiSelectConfig) {
+angular.module('shoppingList', ['ngSanitize', 'ui.select', 'ng.group']).config(
+  ['uiSelectConfig', function(uiSelectConfig) {
     'use strict';
     uiSelectConfig.theme = 'bootstrap';
     uiSelectConfig.resetSearchInput = true;
-  });
+  }]
+);
