@@ -3,6 +3,8 @@ var gulp        = require('gulp');
 var runSequence = require('run-sequence');
 var concat      = require('gulp-concat');
 var ghPages     = require('gulp-gh-pages');
+var minifyCss   = require('gulp-minify-css');
+var uglify      = require('gulp-uglify');
 var del         = require('del');
 
 var buildFolder = './dist/';
@@ -44,6 +46,21 @@ gulp.task('copy:index', function() {
     .pipe(gulp.dest(buildFolder));
 });
 
+gulp.task('minify:js', function() {
+  return gulp.src(path.join(buildFolder, 'js', 'app.js'))
+    .pipe(uglify({
+      mangle: false,
+      preserveComments: 'some'
+    }))
+    .pipe(gulp.dest(path.join(buildFolder, 'js')));
+});
+
+gulp.task('minify:css', function() {
+  return gulp.src(path.join(buildFolder, 'css', 'app.css'))
+    .pipe(minifyCss())
+    .pipe(gulp.dest(path.join(buildFolder, 'css')))
+});
+
 gulp.task('build', function(done) {
   runSequence(
     ['clean'],
@@ -52,7 +69,11 @@ gulp.task('build', function(done) {
   );
 });
 
-gulp.task('publish', ['build'], function() {
+gulp.task('optimize', ['build'], function(done) {
+  runSequence(['minify:js', 'minify:css'], done);
+});
+
+gulp.task('publish', ['optimize'], function() {
   return gulp.src(path.join(buildFolder, '**/*'))
     .pipe(ghPages());
 });
