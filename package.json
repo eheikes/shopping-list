@@ -1,13 +1,15 @@
 {
   "name": "shopping-list",
   "version": "0.1.0",
-  "description": "Shopping list utility",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "Shopping list app that automatically sorts by category in a printable format.",
+  "homepage": "https://github.com/eheikes/shopping-list",
+  "bugs": "https://github.com/eheikes/shopping-list/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eheikes/shopping-list.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Eric Heikes (http://ericheikes.com)",
+  "license": "Apache-2.0",
   "devDependencies": {
     "del": "^1.1.1",
     "gulp": "^3.8.11",
