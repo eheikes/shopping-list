@@ -32,7 +32,7 @@ angular.module('shoppingList').controller(
     $scope.isEditing = true;
 
     var now = new Date();
-    $scope.name = 'Shopping ' + now.getMonth() + '/' + now.getDate() + '/' + now.getFullYear();
+    $scope.name = 'Shopping ' + (now.getMonth() + 1) + '/' + now.getDate() + '/' + now.getFullYear();
 
     $scope.listItems = [
       angular.copy(blankItem)
