@@ -71,7 +71,7 @@
           <div class="col-md-12">
             <h1>{{name}}</h1>
             <div ng-repeat="group in listItems | groupBy:'category':'itemsByCategory'">
-              <h2>{{group.category}}</h2>
+              <h2>{{group.category || "Uncategorized"}}</h2>
               <table class="table table-striped">
                 <tbody>
                   <tr ng-repeat="item in group.items">
