@@ -1,0 +1,48 @@
+<div>
+  <div class="row">
+    <div class="col-md-12 form-inline">
+      <h1>
+        Shopping List
+        <input id="list-name" class="form-control" type="text" ng-model="name" placeholder="List name">
+      </h1>
+    </div>
+  </div>
+  <div ng-repeat="item in listItems">
+    <div class="row">
+      <div class="col-md-3 form-group">
+        <input class="form-control" type="text" ng-model="item.name" placeholder="Name">
+      </div>
+      <div class="col-md-3 form-group">
+        <ui-select tagging tagging-label="(new)" ng-model="item.category">
+          <ui-select-match allow-clear placeholder="Category">
+            {{$select.selected}}
+          </ui-select-match>
+          <ui-select-choices repeat="category in categories">
+            {{category}}
+          </ui-select-choices>
+        </ui-select>
+      </div>
+      <div class="col-md-1 form-group">
+        <input class="form-control" type="text" ng-model="item.quantity" placeholder="Qty">
+      </div>
+      <div class="col-md-2 form-group">
+        <input class="form-control" type="text" ng-model="item.unit" placeholder="Unit">
+      </div>
+      <div class="col-md-2 form-group">
+        <input class="form-control" type="text" ng-model="item.notes" placeholder="Additional notes">
+      </div>
+      <div class="col-md-1 form-group">
+        <button type="button" class="btn btn-danger" ng-click="removeItem($index)">
+          <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <button type="button" class="btn btn-success" ng-click="addItem()">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add
+      </button>
+    </div>
+  </div>
+</div>

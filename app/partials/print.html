@@ -1,0 +1,20 @@
+<div class="printable">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>{{name}}</h1>
+      <div ng-repeat="group in listItems | groupBy:'category':'itemsByCategory'">
+        <h2>{{group.category || "Uncategorized"}}</h2>
+        <table class="table table-striped">
+          <tbody>
+            <tr ng-repeat="item in group.items">
+              <td class="qty">{{item.quantity}}</td>
+              <td class="unit">{{item.unit}}</td>
+              <td class="name">{{item.name}}</td>
+              <td class="notes">{{item.notes}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
