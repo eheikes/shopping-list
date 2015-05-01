@@ -8,14 +8,16 @@ var concat      = require('gulp-concat');
 var ghPages     = require('gulp-gh-pages');
 var jshint      = require('gulp-jshint');
 var minifyCss   = require('gulp-minify-css');
+var ngTemplate  = require('gulp-angular-templatecache');
 var uglify      = require('gulp-uglify');
 var usemin      = require('gulp-usemin');
 var del         = require('del');
 
+var tempFolder  = './.tmp/';
 var buildFolder = './dist/';
 
 gulp.task('clean', function(done) {
-  del(buildFolder, done);
+  del([tempFolder, buildFolder], done);
 });
 
 gulp.task('lint', function() {
@@ -51,6 +53,15 @@ gulp.task('minify:css', function() {
     .pipe(gulp.dest(path.join(buildFolder, 'css')));
 });
 
+gulp.task('ngtemplates', function() {
+  return gulp.src('app/partials/*.html')
+    .pipe(ngTemplate({
+      module: 'shoppingList',
+      filename: 'templates.js'
+    }))
+    .pipe(gulp.dest(tempFolder));
+});
+
 gulp.task('usemin', function () {
   return gulp.src('app/index.html')
       .pipe(usemin())
@@ -60,6 +71,7 @@ gulp.task('usemin', function () {
 gulp.task('build', function(done) {
   runSequence(
     ['clean'],
+    ['ngtemplates'],
     ['usemin', 'copy:fonts', 'copy:index'],
     done
   );
@@ -79,7 +91,10 @@ gulp.task('watch', function() {
     'gulpfile.js',
     'app/*.js'
   ], ['lint']);
-  gulp.watch('app/**/*', ['build']);
+  gulp.watch([
+    'gulpfile.js',
+    'app/**/*'
+  ], ['build']);
 });
 
 gulp.task('default', function(done) {
