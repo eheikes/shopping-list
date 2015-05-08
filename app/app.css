@@ -20,24 +20,24 @@ body {
 }
 
 table td.qty {
-  width: 60px;
-}
-
-table td.qty {
-  width: 60px;
+  width: 3em;
 }
 
 table td.unit {
-  width: 120px;
+  width: 6em;
 }
 
 table td.name {
-  width: 250px;
+  width: 13em;
 }
 
 @media print {
   body {
     font-size: 10px;
+  }
+
+  .col-xs-6 {
+    page-break-inside: avoid;
   }
 
   .printable h1 {
@@ -47,6 +47,10 @@ table td.name {
 
   .printable h2 {
     font-size: 12px;
+  }
+
+  .printable .table > tbody > tr > td {
+    padding: 2px;
   }
 
   .footer {
