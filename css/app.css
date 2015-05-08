@@ -11,4 +11,4 @@
  * Shopping List
  * http://github.com/eheikes/shopping-list
  * License: Apache-2.0
- */html{position:relative;min-height:100%}body{margin-bottom:50px}.footer{position:absolute;bottom:0;height:40px}table td.qty{width:60px}table td.unit{width:120px}table td.name{width:250px}@media print{.printable h1{font-size:24px}.printable h2{font-size:18px}.footer{display:none}}
+ */html{position:relative;min-height:100%}body{margin-bottom:50px}.footer{position:absolute;bottom:0;height:40px}table td.qty{width:3em}table td.unit{width:6em}table td.name{width:13em}@media print{body{font-size:10px}.col-xs-6{page-break-inside:avoid}.printable h1{font-size:14px;margin-top:0}.printable h2{font-size:12px}.printable .table>tbody>tr>td{padding:2px}.footer{display:none}}
