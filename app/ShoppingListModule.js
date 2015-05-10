@@ -3,7 +3,14 @@
  * http://github.com/eheikes/shopping-list
  * License: Apache-2.0
  */
-angular.module('shoppingList', ['ngSanitize', 'ui.select', 'ng.group']).config(
+angular.module('shoppingList', [
+  'ngAnimate',
+  'ngAria',
+  'ngMaterial',
+  'ngSanitize',
+  'ui.select',
+  'ng.group'
+]).config(
   ['uiSelectConfig', function(uiSelectConfig) {
     'use strict';
     uiSelectConfig.theme = 'bootstrap';
