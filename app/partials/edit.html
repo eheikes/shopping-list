@@ -8,11 +8,11 @@
     </div>
   </div>
   <div ng-repeat="item in listItems">
-    <div class="row">
-      <div class="col-md-3 form-group">
+    <div layout="row">
+      <div flex="25" class="form-group">
         <input class="form-control" type="text" ng-model="item.name" placeholder="Name">
       </div>
-      <div class="col-md-3 form-group">
+      <div flex="25" class="form-group">
         <ui-select tagging tagging-label="(new)" ng-model="item.category">
           <ui-select-match allow-clear placeholder="Category">
             {{$select.selected}}
@@ -22,16 +22,16 @@
           </ui-select-choices>
         </ui-select>
       </div>
-      <div class="col-md-1 form-group">
+      <div flex class="form-group">
         <input class="form-control" type="text" ng-model="item.quantity" placeholder="Qty">
       </div>
-      <div class="col-md-2 form-group">
+      <div flex="15" class="form-group">
         <input class="form-control" type="text" ng-model="item.unit" placeholder="Unit">
       </div>
-      <div class="col-md-2 form-group">
+      <div flex="15" class="form-group">
         <input class="form-control" type="text" ng-model="item.notes" placeholder="Additional notes">
       </div>
-      <div class="col-md-1 form-group">
+      <div flex class="form-group">
         <button type="button" class="btn btn-danger" ng-click="removeItem($index)">
           <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
         </button>
