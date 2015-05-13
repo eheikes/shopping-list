@@ -8,12 +8,5 @@ angular.module('shoppingList', [
   'ngAria',
   'ngMaterial',
   'ngSanitize',
-  'ui.select',
   'ng.group'
-]).config(
-  ['uiSelectConfig', function(uiSelectConfig) {
-    'use strict';
-    uiSelectConfig.theme = 'bootstrap';
-    uiSelectConfig.resetSearchInput = true;
-  }]
-);
+]);

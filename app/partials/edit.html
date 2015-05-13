@@ -13,14 +13,9 @@
         <input class="form-control" type="text" ng-model="item.name" placeholder="Name">
       </div>
       <div flex="25" class="form-group">
-        <ui-select tagging tagging-label="(new)" ng-model="item.category">
-          <ui-select-match allow-clear placeholder="Category">
-            {{$select.selected}}
-          </ui-select-match>
-          <ui-select-choices repeat="category in categories">
-            {{category}}
-          </ui-select-choices>
-        </ui-select>
+        <md-autocomplete md-selected-item="item.category" md-items="category in categories" md-item-text="item.category" placeholder="Category">
+          {{category}}
+        </md-autocomplete>
       </div>
       <div flex class="form-group">
         <input class="form-control" type="text" ng-model="item.quantity" placeholder="Qty">
