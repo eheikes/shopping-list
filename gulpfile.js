@@ -29,6 +29,12 @@ gulp.task('lint', function() {
     .pipe(jshint.reporter('default'));
 });
 
+gulp.task('copy:sourcemaps', function() {
+  return gulp.src('bower_components/bootstrap/dist/css/bootstrap.css.map')
+    .pipe(gulp.dest(buildFolder + '/css'))
+    .pipe(connect.reload());
+});
+
 gulp.task('copy:fonts', function() {
   return gulp.src('bower_components/bootstrap/fonts/**')
     .pipe(gulp.dest(buildFolder + '/fonts'))
@@ -77,7 +83,7 @@ gulp.task('build', function(done) {
   runSequence(
     'clean',
     'ngtemplates',
-    ['usemin', 'copy:fonts', 'copy:index'],
+    ['usemin', 'copy:sourcemaps', 'copy:fonts', 'copy:index'],
     done
   );
 });
