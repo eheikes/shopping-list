@@ -70,8 +70,8 @@ gulp.task('usemin', function () {
 
 gulp.task('build', function(done) {
   runSequence(
-    ['clean'],
-    ['ngtemplates'],
+    'clean',
+    'ngtemplates',
     ['usemin', 'copy:fonts', 'copy:index'],
     done
   );
