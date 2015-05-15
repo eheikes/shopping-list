@@ -1,7 +1,6 @@
 /* jshint node:true */
 'use strict';
 
-var path        = require('path');
 var gulp        = require('gulp');
 var runSequence = require('run-sequence');
 var concat      = require('gulp-concat');
@@ -32,7 +31,7 @@ gulp.task('lint', function() {
 
 gulp.task('copy:fonts', function() {
   return gulp.src('bower_components/bootstrap/fonts/**')
-    .pipe(gulp.dest(path.join(buildFolder, 'fonts')))
+    .pipe(gulp.dest(buildFolder + '/fonts'))
     .pipe(connect.reload());
 });
 
@@ -43,18 +42,18 @@ gulp.task('copy:index', function() {
 });
 
 gulp.task('minify:js', function() {
-  return gulp.src(path.join(buildFolder, 'js', 'app.js'))
+  return gulp.src(buildFolder + 'js/app.js')
     .pipe(uglify({
       preserveComments: 'some'
     }))
-    .pipe(gulp.dest(path.join(buildFolder, 'js')))
+    .pipe(gulp.dest(buildFolder + '/js'))
     .pipe(connect.reload());
 });
 
 gulp.task('minify:css', function() {
-  return gulp.src(path.join(buildFolder, 'css', 'app.css'))
+  return gulp.src(buildFolder + '/css/app.css')
     .pipe(minifyCss())
-    .pipe(gulp.dest(path.join(buildFolder, 'css')))
+    .pipe(gulp.dest(buildFolder + '/css'))
     .pipe(connect.reload());
 });
 
@@ -88,7 +87,7 @@ gulp.task('optimize', ['build'], function(done) {
 });
 
 gulp.task('publish', ['optimize'], function() {
-  return gulp.src(path.join(buildFolder, '**/*'))
+  return gulp.src(buildFolder + '/**/*')
     .pipe(ghPages());
 });
 
