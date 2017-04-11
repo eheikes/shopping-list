@@ -30,13 +30,13 @@ gulp.task('lint', function() {
 });
 
 gulp.task('copy:sourcemaps', function() {
-  return gulp.src('bower_components/bootstrap/dist/css/bootstrap.css.map')
+  return gulp.src('node_modules/bootstrap/dist/css/bootstrap.css.map')
     .pipe(gulp.dest(buildFolder + '/css'))
     .pipe(connect.reload());
 });
 
 gulp.task('copy:fonts', function() {
-  return gulp.src('bower_components/bootstrap/fonts/**')
+  return gulp.src('node_modules/bootstrap/fonts/**')
     .pipe(gulp.dest(buildFolder + '/fonts'))
     .pipe(connect.reload());
 });
