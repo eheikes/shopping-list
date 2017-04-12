@@ -11,8 +11,8 @@ module.exports = function(config) {
       'node_modules/angular-sanitize/angular-sanitize.js',
       'node_modules/angular-ui-select/select.js',
       'node_modules/ng-group/src/ngGroup.js',
-      'app/ShoppingListModule.js',
-      'app/ShoppingListController.js',
+      'app/shopping-list-module.js',
+      'app/shopping-list-controller.js',
       'test/unit/*.spec.js'
     ],
     exclude: [],
