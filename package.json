@@ -10,6 +10,11 @@
   },
   "author": "Eric Heikes (http://ericheikes.com)",
   "license": "Apache-2.0",
+  "scripts": {
+    "build": "gulp build",
+    "lint": "gulp lint",
+    "test": "gulp test:unit"
+  },
   "devDependencies": {
     "angular": "~1.5.11",
     "angular-mocks": "~1.5.11",
