@@ -11,11 +11,13 @@
   "author": "Eric Heikes (http://ericheikes.com)",
   "license": "Apache-2.0",
   "devDependencies": {
-    "angular": "~1.3.4",
-    "angular-sanitize": "~1.3.14",
+    "angular": "~1.5.11",
+    "angular-mocks": "~1.5.11",
+    "angular-sanitize": "~1.5.11",
     "angular-ui-select": "^0.12.0",
     "bootstrap": "~3.3.2",
     "del": "^1.1.1",
+    "es5-shim": "^4.5.9",
     "gulp": "^3.8.11",
     "gulp-angular-templatecache": "^1.6.0",
     "gulp-concat": "^2.5.2",
@@ -25,7 +27,12 @@
     "gulp-minify-css": "^1.0.0",
     "gulp-uglify": "^1.1.0",
     "gulp-usemin": "^0.3.11",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.6.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-phantomjs-launcher": "^1.0.4",
     "ng-group": "samstokes/ng-group#v0.9.0",
+    "phantomjs-prebuilt": "^2.1.14",
     "run-sequence": "^1.0.2"
   }
 }

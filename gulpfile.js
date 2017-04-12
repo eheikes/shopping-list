@@ -7,6 +7,7 @@ var concat      = require('gulp-concat');
 var connect     = require('gulp-connect');
 var ghPages     = require('gulp-gh-pages');
 var jshint      = require('gulp-jshint');
+var Karma       = require('karma').Server;
 var minifyCss   = require('gulp-minify-css');
 var ngTemplate  = require('gulp-angular-templatecache');
 var uglify      = require('gulp-uglify');
@@ -103,6 +104,14 @@ gulp.task('connect', function() {
     port: 8000,
     livereload: true
   });
+});
+
+gulp.task('test:unit', function(done) {
+  new Karma({
+    configFile: __dirname + '/test/unit/karma.conf.js'
+  }, function(err) {
+    done(err ? new Error('Karma exited with error') : null);
+  }).start();
 });
 
 gulp.task('watch', function() {
