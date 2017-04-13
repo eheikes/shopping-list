@@ -6,7 +6,7 @@ Create a shopping list, automatically sorted by category in a printable format.
 
 ## Build
 
-To build the project, you'll need [NodeJS/npm](https://nodejs.org/), and [gulp](http://gulpjs.com/) installed.
+To build the project, you'll need [NodeJS/npm](https://nodejs.org/).
 
 First, install the dependencies:
 
@@ -14,18 +14,20 @@ First, install the dependencies:
 npm install
 ```
 
-To build the project into the `dist` folder, run the default gulp task:
+The following npm scripts are available:
 
 ```shell
-gulp
+npm run lint   # lint the files
+npm run build  # compile the project into the "dist" folder
+npm start      # run a local server for development
+npm test       # run tests
 ```
-
-The default task will watch for changes to the files and rebuild as necessary.
 
 To build and publish the project to the `gh-pages` branch:
 
 ```shell
-gulp publish
+GH_TOKEN=put_your_token_here # see https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/
+npm run build && npm run publish
 ```
 
 ## License
