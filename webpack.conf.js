@@ -2,7 +2,7 @@
 var path = require('path');
 
 module.exports = {
-	context: path.resolve(__dirname),
+  context: path.resolve(__dirname),
   entry: [
     './node_modules/bootstrap/dist/css/bootstrap.css',
     './node_modules/ui-select/dist/select.css',
@@ -14,7 +14,7 @@ module.exports = {
     './app/shopping-list-module.js',
     './app/shopping-list-controller.js',
     './.tmp/templates.js',
-	],
+  ],
   output: {
     filename: 'app.js',
     path: path.resolve(__dirname, 'dist')
