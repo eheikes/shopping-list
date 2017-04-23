@@ -30,6 +30,10 @@ GH_TOKEN=put_your_token_here # see https://help.github.com/articles/creating-a-p
 npm run build && npm run publish
 ```
 
+## Contributing
+
+Bug reports and contributions are welcome. [Create an issue or feature request](https://github.com/eheikes/shopping-list/issues), or [submit a pull request](https://help.github.com/articles/creating-a-pull-request/) with your proposed changes.
+
 ## License
 
 Copyright 2015-2017 Eric Heikes. Licensed under the [Apache License, Version 2.0](LICENSE.txt) (the "License"); you may not use this file except in compliance with the License.
