@@ -1,0 +1,9 @@
+.publish/
+.tmp/
+app/
+test/
+.editorconfig
+.gitignore
+.jshintrc
+.travis.yml
+webpack.conf.js
