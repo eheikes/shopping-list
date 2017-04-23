@@ -4,6 +4,8 @@ Create a shopping list, automatically sorted by category in a printable format.
 
 **[Use it here](http://eheikes.github.io/shopping-list/).**
 
+![screenshot](https://github.com/eheikes/shopping-list/blob/docs/screenshot.png)
+
 ## Build
 
 To build the project, you'll need [NodeJS/npm](https://nodejs.org/).
