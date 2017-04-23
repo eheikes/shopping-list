@@ -10,6 +10,10 @@
   },
   "author": "Eric Heikes (http://ericheikes.com)",
   "license": "Apache-2.0",
+  "keywords": [
+    "shopping",
+    "list"
+  ],
   "scripts": {
     "build": "run-s clean ngtemplates && run-p webpack copy:index",
     "clean": "del .tmp dist",
