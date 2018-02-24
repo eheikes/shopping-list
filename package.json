@@ -2,6 +2,7 @@
   "name": "shopping-list",
   "version": "0.2.0",
   "description": "Shopping list app that automatically sorts by category in a printable format.",
+  "private": true,
   "homepage": "https://github.com/eheikes/shopping-list",
   "bugs": "https://github.com/eheikes/shopping-list/issues",
   "repository": {
