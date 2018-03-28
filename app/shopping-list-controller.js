@@ -11,23 +11,34 @@ angular.module('shoppingList').controller(
     };
 
     $scope.categories = [
+      'Asian',
       'Baking',
+      'Beer',
       'Beverages',
+      'Box Dinners',
       'Bread/Bakery',
       'Bulk',
       'Canned Goods',
       'Cereal/Breakfast',
       'Cheese',
+      'Coffee/Tea',
       'Condiments',
-      'Dairy',
+      'Dairy/Milk/Eggs',
       'Deli',
+      'Food Storage',
       'Frozen Foods',
       'Meats',
+      'Mexican',
       'Non-Food',
-      'Pasta/Rice',
+      'Pasta',
+      'Peanut Butter & Jelly',
+      'Pet',
       'Produce',
+      'Rice/Beans',
       'Snacks',
-      'Spices'
+      'Soup',
+      'Spices',
+      'Wine',
     ];
     $scope.categories.sort();
 
