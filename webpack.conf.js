@@ -4,6 +4,13 @@ var path = require('path');
 module.exports = {
   context: path.resolve(__dirname),
   entry: [
+    './node_modules/@fortawesome/fontawesome-free/css/solid.css',
+    './node_modules/@fortawesome/fontawesome-free/css/fontawesome.css',
+    './node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.eot',
+    './node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.svg',
+    './node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.ttf',
+    './node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff',
+    './node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2',
     './node_modules/bootstrap/dist/css/bootstrap.css',
     './node_modules/ui-select/dist/select.css',
     './app/app.css',

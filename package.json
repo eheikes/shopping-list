@@ -27,6 +27,7 @@
     "webpack": "webpack --config webpack.conf.js"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.3.1",
     "angular": "~1.5.11",
     "angular-mocks": "~1.5.11",
     "angular-sanitize": "~1.5.11",
