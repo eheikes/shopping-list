@@ -12,6 +12,21 @@ body {
   margin-bottom: 50px;
 }
 
+/*
+ * Fix for ui-select under Bootstrap 4
+ * see https: //github.com/angular-ui/ui-select/issues/2145
+ */
+.dropdown-menu {
+  display: block;
+}
+
+/*
+ * Reset to Bootstrap .form-control setting to show the border.
+ */
+.ui-select-toggle {
+  border: 1px solid #ced4da;
+}
+
 .footer {
   position: absolute;
   bottom: 0;
