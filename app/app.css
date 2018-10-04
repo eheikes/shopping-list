@@ -12,6 +12,11 @@ body {
   margin-bottom: 50px;
 }
 
+.container {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
 /*
  * Fix for ui-select under Bootstrap 4
  * see https: //github.com/angular-ui/ui-select/issues/2145
