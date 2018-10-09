@@ -19,7 +19,7 @@
     "build": "run-s clean ngtemplates && run-p webpack copy:index",
     "clean": "del-cli .tmp dist",
     "copy:index": "mkdirp dist && cp app/index.html dist/",
-    "lint": "jshint app/*.js webpack.conf.js",
+    "lint": "jshint app webpack.conf.js",
     "ngtemplates": "mkdirp .tmp && nghtml2js -m shoppingList --no-new-module -p app/partials/ -o .tmp/templates.js -- app/partials/edit.html app/partials/footer.html app/partials/print.html",
     "publish": "github-pages -r eheikes/shopping-list -t $GH_TOKEN ./dist",
     "start": "http-server dist",
