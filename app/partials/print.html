@@ -1,20 +1,18 @@
 <div class="printable">
   <h1>{{name}}</h1>
   <div class="row">
-    <div ng-repeat="group in listItems | groupBy:'category':'itemsByCategory'">
-      <div class="col-xs-6 col-md-6">
-        <h2>{{group.category || "Uncategorized"}}</h2>
-        <table class="table table-striped">
-          <tbody>
-            <tr ng-repeat="item in group.items">
-              <td class="qty">{{item.quantity}}</td>
-              <td class="unit">{{item.unit}}</td>
-              <td class="name">{{item.name}}</td>
-              <td class="notes">{{item.notes}}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    <div ng-repeat="group in listItems | groupBy:'category':'itemsByCategory'" class="col-6">
+      <h2>{{group.category || "Uncategorized"}}</h2>
+      <table class="table table-striped">
+        <tbody>
+          <tr ng-repeat="item in group.items">
+            <td class="qty">{{item.quantity}}</td>
+            <td class="unit">{{item.unit}}</td>
+            <td class="name">{{item.name}}</td>
+            <td class="notes">{{item.notes}}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
