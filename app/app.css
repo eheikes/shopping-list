@@ -18,11 +18,58 @@ body {
 }
 
 /*
+ * Old Bootstrap styling, needed for ui-select.
+ */
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px dashed;
+  border-top: 4px solid \9;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+
+/*
+ * Copy of .fas from FontAwesome, needed for ui-select.
+ */
+.glyphicon {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+/*
+ * Copy of .fa-backspace, needed for ui-select.
+ */
+.glyphicon-remove:before {
+  content: "\f55a";
+}
+
+/*
  * Fix for ui-select under Bootstrap 4
  * see https: //github.com/angular-ui/ui-select/issues/2145
  */
 .dropdown-menu {
   display: block;
+}
+
+/*
+ * Fix "clear" button for ui-select under Bootstrap 4 + FontAwesome.
+ */
+.ui-select-bootstrap .ui-select-toggle > a.btn[aria-label="Select box clear"] {
+  margin-top: 0;
+  padding: 0;
+  height: 16px;
+  right: 15px;
 }
 
 /*
