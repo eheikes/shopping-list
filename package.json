@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.3.1",
-    "angular": "~1.6.0",
+    "angular": "~1.7.9",
     "angular-mocks": "~1.5.11",
     "angular-sanitize": "~1.5.11",
     "angular-template-cache": "^1.2.0",
